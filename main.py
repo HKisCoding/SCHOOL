@@ -13,7 +13,7 @@ def get_args(model_name, dataset, custom_key="", yaml_path=None) -> argparse.Nam
     parser.add_argument("--model-name", default=model_name)
     parser.add_argument("--custom_key", default=custom_key)
     parser.add_argument("--dataset", default=dataset)
-    parser.add_argument('--gpu_num', nargs='?', default='5')
+    parser.add_argument('--gpu_num', type=int, nargs='?', default= 5)
     parser.add_argument('--lr', type = float, default = 0.0005)
     # parser.add_argument('--lr2', type=float, default=0.0001)
     parser.add_argument('--patience', type=int, default=30)
